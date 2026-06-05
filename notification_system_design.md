@@ -100,8 +100,23 @@ UPDATE notifications SET is_read = TRUE WHERE id = 1;
 DELETE FROM Notifications WHERE id = 1;
 
 ============================================================================================================================================================
-STAGE 3
+#######STAGE 3
 
 The above query is slow for larger databases because it involves scanning of every id of the database which becomes complex for larger datasets and hence it is better to solve it by using INDEXING
+
+
+
+===============================================================================================================================================================
+
+
+####STAGE 4
+
+If the load for a system is recieving more load then it is better to use concepts like Caching.
+Using a fast key-index based system like Redis can decrease the load significantly
+
+
+
+
+
 
 
